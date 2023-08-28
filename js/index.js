@@ -1,1 +1,3 @@
-console.log('js connected')
+const loadDataFromApi = async() => {
+    
+}
