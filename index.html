@@ -35,30 +35,15 @@
     <main class="max-w-7xl mx-auto mt-10 px-3">
       <h2 class="text-4xl font-semibold text-center mb-8">Search your phone</h2>
       <div class="text-center mb-10">
-        <input
+        <input id="search-input"
           type="text"
           placeholder="Search  here"
           class="input input-bordered input-primary md:w-full max-w-xs"
         />
-        <button class="btn btn-primary">Search</button>
+        <button onclick="handelSearch()" class="btn btn-primary">Search</button>
       </div>
       <section class="mt-5">
-        <div>
-          <div class="card bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
+        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         </div>
       </section>
     </main>
