@@ -5,13 +5,22 @@ const loadDataFromApi = async (searchValue) => {
   );
   const data = await res.json();
   const phones = data.data;
-  console.log(phones);
+//   console.log(phones);
   displayPhones(phones);
 };
 // show data from api
 const displayPhones = (phones) => {
   const phoneContainer = document.getElementById("phone-container");
   phoneContainer.textContent = "";
+  console.log(phones)
+  if (phones.length > 12) {
+    const showAllButton = document.getElementById('show-all-btn')
+    showAllButton.classList.remove('hideen')
+  }
+  else{
+    showAllButton.classList.add('hidden')
+  }
+  phones = phones.slice(0,12)
   phones.forEach((phone) => {
     const div = document.createElement("div");
     div.classList = `card bg-base-100 shadow-xl pt-4`;
@@ -35,6 +44,6 @@ const displayPhones = (phones) => {
 const handelSearch = () => {
   const searchInput = document.getElementById("search-input");
   const searchValue = searchInput.value;
-  console.log(searchValue);
+//   console.log(searchValue);
   loadDataFromApi(searchValue);
 };

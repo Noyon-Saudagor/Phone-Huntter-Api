@@ -12,6 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <!-- start header section  -->
     <header class="bg-[#0d6efd0d] px-3">
       <nav class="flex justify-between max-w-7xl mx-auto pt-8">
         <h2 class="text-3xl font-bold">Hot Gadgets</h2>
@@ -32,21 +33,60 @@
         </div>
       </section>
     </header>
+    <!-- finished header section  -->
+
+    <!-- start main section  -->
     <main class="max-w-7xl mx-auto mt-10 px-3">
+      <!-- start search section  -->
       <h2 class="text-4xl font-semibold text-center mb-8">Search your phone</h2>
       <div class="text-center mb-10">
-        <input id="search-input"
+        <input
+          id="search-input"
           type="text"
           placeholder="Search  here"
           class="input input-bordered input-primary md:w-full max-w-xs"
         />
-        <button onclick="handelSearch()" class="btn btn-primary">Search</button>
+        <button onclick="searchHandel()" class="btn btn-primary">Search</button>
       </div>
+      <!-- finished search section  -->
+
+      <!-- show result section  -->
       <section class="mt-5">
-        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <!-- start spiner or loader section  -->
+        <div id="loading-spiner" class="text-center hidden">
+          <span class="loading loading-bars loading-lg"></span>
         </div>
+        <!-- finished spiner or loader section  -->
+
+        <!-- start result card section  -->
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
+        ></div>
+        <!-- finished result card section  -->
+
+        <!-- start show all buttion section  -->
+        <div class="text-center mt-3">
+          <button
+            onclick="showAll()"
+            id="show-all-btn"
+            class="btn btn-outline btn-accent mt-3 hidden"
+          >
+            Show All
+          </button>
+        </div>
+        <!-- finished show all buttion section  -->
       </section>
+      <!-- modal section start  -->
+      <section id="modal" onclick="my_modal_5.showModal()">
+        <!-- Open the modal using ID.showModal() method -->
+       
+      </section>
+      <!-- modal section finished -->
     </main>
+    <!-- main section finished -->
+
+    <!-- start footer section  -->
     <footer class="bg-[#0d6efd0d] mt-10 py-32 px-3">
       <div class="max-w-7xl mx-auto flex flex-row md:justify-between">
         <div>
@@ -89,8 +129,12 @@
           <h2>Careers</h2>
         </div>
       </div>
-      <h4 class="text-center font-medium mt-20">© Copyright- 2023 || Design By Noyon Saudagor </h4>
+      <h4 class="text-center font-medium mt-20">
+        © Copyright- 2023 || Design By Noyon Saudagor
+      </h4>
     </footer>
-    <script src="js/index.js"></script>
+    <!-- finished footer section  -->
+    <!-- <script src="js/index.js"></script> -->
+    <script src="script.js"></script>
   </body>
 </html>
